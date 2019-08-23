@@ -39,7 +39,7 @@ Example:
 This field is the content of the publication that should be displayed. The interpretation of the content must follow the
  format indicated in the `format` field of `json_metadata`.
 
-- Format `data`: **JSON-Array** of [Data types](https://github.com/creativechain/dips/blob/master/types.md#data-types).
+- Format `data`: **JSON-Array** of [Data types](types.md).
 ```json
 [
   {

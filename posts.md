@@ -1,9 +1,5 @@
 # Posts/Comment Data Structure
 
-**Table of Contents**
-
-[TOCM]
-
 ### json_metadata
 This data must always have a **JSON format**. Posts and comments actually use the same element internally in the blockchain,
  the difference between them is that the comment is linked to a "parent" (a post or other comment). The structure for 

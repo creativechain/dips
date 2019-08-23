@@ -1,21 +1,22 @@
 # Posts/Comment Data Structure
 
+**Table of Contents**
+
+[TOCM]
+
 ### json_metadata
-This data must always have a JSON format. Posts and comments actually use the same element internally in the blockchain,
+This data must always have a **JSON format**. Posts and comments actually use the same element internally in the blockchain,
  the difference between them is that the comment is linked to a "parent" (a post or other comment). The structure for 
     the posts should be as follows.
 
-- `description` (String): Description of post/project/work.
-- `tags` (String Array): Post related tags. The first tag must be the same that "parent_permlink".
-- `thumb` (File): Thumbnail image that represent the project. Must be always type Image File with a MIME Type supported 
-in common browsers (Chrome/Firefox/IE/Edge/Safari/Opera).
-- `format` (String): Format of the content of the "body" field. It can be one of the following:
-    - `markdown`: Text in markdown format.
-    - `html`: Text in HTML format. Without CSS styles.
-    - `data`: JSON-Array of Data types.
-- `app` (String): Text string indicating the application used that modified / edited the publication, including the 
-version.
-- `other` (JSON|Optional): Optional field to include more data in JSON format.
+| Field | Type | Description |
+|-------|------|-------------|
+|`description`| String |Description of post/project/work.|
+|`tags` |String Array | Post related tags. The first tag must be the same that "parent_permlink".|
+|`thumb`| File | Thumbnail image that represent the project. Must be always type Image File with a MIME Type supported in common browsers (Chrome/Firefox/IE/Edge/Safari/Opera).|
+|`format`| String | Format of the content of the "body" field. It can be `markdown`, `html` or `data`.|
+|`app`|String | Text string indicating the application used that modified / edited the publication, including the version.|
+|`other`|JSON| Optional field to include more data in JSON format.|
 
 Example:
 ```json
@@ -42,7 +43,7 @@ Example:
 This field is the content of the publication that should be displayed. The interpretation of the content must follow the
  format indicated in the `format` field of `json_metadata`.
 
-- `data` format example:
+- Format `data`: **JSON-Array** of [Data types](https://github.com/creativechain/dips/blob/master/types.md#data-types).
 ```json
 [
   {
@@ -59,7 +60,7 @@ This field is the content of the publication that should be displayed. The inter
 ] 
 ```
 
-- `html` format example:
+- Format `html`: Text in **HTML** format. **Without CSS** styles.
 ```html
 
 <p>
@@ -79,7 +80,7 @@ This field is the content of the publication that should be displayed. The inter
     Visit @maleev's profile: <a href="https://creary.net/@maleev">creary.net/@maleev</a>;
 </p>
 ```
-- `markdown`
+- Format `markdown`: Text in markdown format.
 
 ```markdown
 # Crea Data Improvement Proposals

@@ -5,14 +5,14 @@ This data must always have a **JSON format**. Posts and comments actually use th
  the difference between them is that the comment is linked to a "parent" (a post or other comment). The structure for 
     the posts should be as follows.
 
-| Field | Type | Description |
-|-------|------|-------------|
-|`description`| String |Description of post/project/work.|
-|`tags` |String Array | Post related tags. The first tag must be the same that "parent_permlink".|
-|`thumb`| File | Thumbnail image that represent the project. Must be always type Image File with a MIME Type supported in common browsers (Chrome/Firefox/IE/Edge/Safari/Opera).|
-|`format`| String | Format of the content of the "body" field. It can be `markdown`, `html` or `data`.|
-|`app`|String | Text string indicating the application used that modified / edited the publication, including the version.|
-|`other`|JSON| Optional field to include more data in JSON format.|
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+|`description`| String | Yes |Description of post/project/work.|
+|`tags` | String Array | Yes | Post related tags. The first tag must be the same that "parent_permlink".|
+|`thumb`| File | Yes | Thumbnail image that represent the project. Must be always type Image File with a MIME Type supported in common browsers (Chrome/Firefox/IE/Edge/Safari/Opera).|
+|`format`| String | Yes | Format of the content of the "body" field. It can be `markdown`, `html` or `data`.|
+|`app`| String | Yes | Text string indicating the application used that modified / edited the publication, including the version.|
+|`other`| JSON Object | No | Optional field to include more data in JSON format.|
 
 Example:
 ```json

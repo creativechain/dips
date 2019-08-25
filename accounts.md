@@ -6,7 +6,7 @@ This data must always have a **JSON format**.  The structure should be as follow
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 |`avatar`| File | No | Image to use as user's avatar. Must be always type Image File with a MIME Type supported in common browsers (Chrome/Firefox/IE/Edge/Safari/Opera).|
-|`publicName`| String | No | Name to display instead of @username.|
+|`publicName`| String | No | Name to display instead account name.|
 |`about` | String | No | This field should serve to offer information about the user such as his profession or his specialty in the creative world.
 |`contact`| String | No | Information that allows you to contact the user. It can be an email, web link, etc ...
 |`web` | String | No | Web link where you can obtain more extensive information from the user, such as other projects, portfolio, personal web, etc ...
